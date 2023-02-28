@@ -2,12 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/NameStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:paddingStart="@dimen/layout_padding"
     android:paddingEnd="@dimen/layout_padding"
+    android:textAlignment="center"
     tools:context=".MainActivity">
 
     <TextView
@@ -16,6 +18,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_label" />
+
+    <EditText
+        android:id="@+id/nickname_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/nickname_"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/done_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:fontFamily="@font/roboto"
+        android:gravity="center_horizontal"
+        android:text="@string/done" />
+
+    <TextView
+        android:id="@+id/nickname_text"
+        style="@style/NameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:text=""/>
 
     <ImageView
         android:id="@+id/star"
@@ -30,13 +61,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/bio_text"
-            style="@style/NameStyle"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:lineSpacingMultiplier="1.2"
-            android:text="@string/bio_text" />
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/NameStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/bio_text" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_menu_view" />
+        </LinearLayout>
+
     </ScrollView>
 
 
